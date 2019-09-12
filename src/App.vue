@@ -8,12 +8,14 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import {db} from '@/main';
 
 export default {
   name: 'app',
   data: function (){
     return{
-      myToDo: ''
+      myToDo: '',
+      errors: ''
     }
   },
  methods: {
