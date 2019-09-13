@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png" id="vue-logo">
     <div class="title">What do I need to do today?</div>
     <input v-model="myTodo"/><button @click="addToDo">Add</button>
+    <div v-if="errors !== ''" id="errors">{{errors}}</div>
   </div>
 </template>
 
@@ -20,6 +21,12 @@ export default {
   },
  methods: {
    addToDo: function () {
+     this.errors = '';
+     if(this.myToDo !== ''){
+
+     }else{
+       this.errors='Enter a todo';
+     }
      console.log('myToDo: ' + this.myToDo)
    }
  }
